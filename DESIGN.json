@@ -1,0 +1,212 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-04-26T00:00:00Z",
+  "title": "Design System: Carmichael Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "gold": {
+        "role": "primary",
+        "displayName": "Carmichael Gold",
+        "canonical": "oklch(70% 0.12 85)",
+        "tonalRamp": [
+          "oklch(15% 0.09 85)",
+          "oklch(25% 0.11 85)",
+          "oklch(35% 0.12 85)",
+          "oklch(45% 0.12 85)",
+          "oklch(55% 0.12 85)",
+          "oklch(65% 0.12 85)",
+          "oklch(70% 0.12 85)",
+          "oklch(82% 0.08 85)"
+        ]
+      },
+      "near-black": {
+        "role": "neutral",
+        "displayName": "Near-Black",
+        "canonical": "oklch(13% 0.008 85)",
+        "tonalRamp": [
+          "oklch(13% 0.008 85)",
+          "oklch(18% 0.008 85)",
+          "oklch(24% 0.008 85)",
+          "oklch(35% 0.008 85)",
+          "oklch(50% 0.008 85)",
+          "oklch(65% 0.008 85)",
+          "oklch(80% 0.008 85)",
+          "oklch(92% 0.005 85)"
+        ]
+      },
+      "warm-white": {
+        "role": "neutral",
+        "displayName": "Warm White",
+        "canonical": "oklch(97% 0.005 85)",
+        "tonalRamp": [
+          "oklch(30% 0.005 85)",
+          "oklch(45% 0.005 85)",
+          "oklch(58% 0.005 85)",
+          "oklch(70% 0.005 85)",
+          "oklch(80% 0.005 85)",
+          "oklch(88% 0.005 85)",
+          "oklch(93% 0.005 85)",
+          "oklch(97% 0.005 85)"
+        ]
+      },
+      "charcoal": {
+        "role": "neutral",
+        "displayName": "Deep Charcoal",
+        "canonical": "oklch(24% 0.008 85)",
+        "tonalRamp": [
+          "oklch(10% 0.008 85)",
+          "oklch(15% 0.008 85)",
+          "oklch(24% 0.008 85)",
+          "oklch(35% 0.008 85)",
+          "oklch(48% 0.008 85)",
+          "oklch(62% 0.008 85)",
+          "oklch(78% 0.006 85)",
+          "oklch(91% 0.004 85)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Campaign-level headlines. Always uppercase. Single words or very short phrases only.",
+        "googleFonts": "Barlow Condensed:wght@900"
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section labels and project category headers.",
+        "googleFonts": "Barlow Condensed:wght@700"
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Project titles within case study cards.",
+        "googleFonts": "Inter:wght@500"
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Project descriptions and supporting copy. 65ch max line length.",
+        "googleFonts": "Inter:wght@400"
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Metadata, dates, skill categories. Always uppercase.",
+        "googleFonts": "Inter:wght@500"
+      }
+    },
+    "shadows": [
+      {
+        "name": "focus-ring",
+        "value": "0 0 0 3px oklch(70% 0.12 85 / 0.25)",
+        "purpose": "Keyboard focus affordance. The one permitted use of gold outside the brand mark. :focus-visible only, never :hover."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-standard",
+        "value": "cubic-bezier(0.22, 1, 0.36, 1)",
+        "purpose": "Default easing for state transitions (ease-out-quint). All state changes."
+      },
+      {
+        "name": "duration-fast",
+        "value": "150ms",
+        "purpose": "Fast micro-interactions: hover border shifts, opacity changes."
+      },
+      {
+        "name": "duration-standard",
+        "value": "250ms",
+        "purpose": "Theme transitions, card entrances."
+      }
+    ],
+    "breakpoints": [
+      { "name": "mobile", "value": "480px" },
+      { "name": "tablet", "value": "768px" },
+      { "name": "desktop-sm", "value": "1024px" },
+      { "name": "desktop", "value": "1280px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Case Study Card",
+      "kind": "card",
+      "refersTo": "case-study-card",
+      "description": "Primary portfolio component. Quiet container holding project title, description, and placeholder media.",
+      "html": "<article class=\"ds-case-study-card\"><div class=\"ds-card-header\"><div class=\"ds-card-title\">Nick Cannon, 2010</div><p class=\"ds-card-desc\">Brand identity and campaign design over a focused 10-week engagement.</p></div><div class=\"ds-card-media\"><div class=\"ds-media-grid\"><div class=\"ds-media-col\"></div><div class=\"ds-media-col\"></div></div><div class=\"ds-pagination-dots\" aria-hidden=\"true\"><span class=\"ds-dot ds-dot--active\"></span><span class=\"ds-dot\"></span><span class=\"ds-dot\"></span></div></div></article>",
+      "css": ".ds-case-study-card { background: #FEFDF9; border-radius: 24px; padding: 48px; display: flex; flex-direction: column; gap: 56px; font-family: 'Inter', sans-serif; } .ds-card-header { display: flex; gap: 80px; align-items: flex-start; } .ds-card-title { white-space: nowrap; flex-shrink: 0; font-size: 18px; font-weight: 500; color: #2D2920; line-height: 1.3; } .ds-card-desc { flex: 1; max-width: 530px; font-size: 16px; font-weight: 400; color: #7A7569; line-height: 1.65; } .ds-card-media { display: flex; flex-direction: column; gap: 24px; align-items: center; } .ds-media-grid { width: 100%; display: flex; gap: 48px; height: 280px; } .ds-media-col { flex: 1; background-color: #DEDAD3; border-radius: 8px; } .ds-pagination-dots { display: flex; align-items: center; gap: 10px; } .ds-dot { width: 8px; height: 8px; border-radius: 50%; background-color: #2D2920; display: block; } .ds-dot--active { opacity: 1; } .ds-dot:not(.ds-dot--active) { opacity: 0.2; }"
+    },
+    {
+      "name": "Theme Toggle",
+      "kind": "button",
+      "refersTo": "theme-toggle",
+      "description": "Fixed-position light/dark mode switcher. The only persistent UI chrome on the page.",
+      "html": "<button class=\"ds-theme-toggle\"><svg class=\"ds-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" width=\"15\" height=\"15\" aria-hidden=\"true\"><path d=\"M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z\"/></svg><span>Dark</span></button>",
+      "css": ".ds-theme-toggle { display: inline-flex; align-items: center; gap: 8px; background: #FEFDF9; border: 1px solid #E8E5DF; border-radius: 9999px; padding: 8px 14px; cursor: pointer; font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 400; color: #2D2920; transition: border-color 150ms cubic-bezier(0.22, 1, 0.36, 1); user-select: none; } .ds-theme-toggle:hover { border-color: #C5A120; } .ds-theme-toggle:focus-visible { outline: none; box-shadow: 0 0 0 3px oklch(70% 0.12 85 / 0.25); } .ds-icon { flex-shrink: 0; }"
+    },
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "btn-primary",
+      "description": "CTA button for project links and contact. Sharp corners, uppercase label. Not yet implemented on the page.",
+      "html": "<button class=\"ds-btn-primary\">VIEW WORK</button>",
+      "css": ".ds-btn-primary { background: #2D2920; color: #F8F7F3; border: 2px solid transparent; border-radius: 0; padding: 16px 40px; font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; cursor: pointer; transition: border-color 150ms cubic-bezier(0.22, 1, 0.36, 1), color 150ms cubic-bezier(0.22, 1, 0.36, 1); } .ds-btn-primary:hover { border-color: #C5A120; } .ds-btn-primary:focus-visible { outline: none; box-shadow: 0 0 0 3px oklch(70% 0.12 85 / 0.25); }"
+    },
+    {
+      "name": "Pagination Dots",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Three-dot carousel indicator. Pure CSS, no images.",
+      "html": "<div class=\"ds-pagination-dots\" aria-hidden=\"true\"><span class=\"ds-dot ds-dot--active\"></span><span class=\"ds-dot\"></span><span class=\"ds-dot\"></span></div>",
+      "css": ".ds-pagination-dots { display: flex; align-items: center; gap: 10px; } .ds-dot { width: 8px; height: 8px; border-radius: 50%; background-color: #2D2920; display: block; transition: opacity 200ms ease; } .ds-dot--active { opacity: 1; } .ds-dot:not(.ds-dot--active) { opacity: 0.2; }"
+    },
+    {
+      "name": "Label",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Metadata label: dates, skill categories, nav items. Always uppercase.",
+      "html": "<span class=\"ds-label\">Brand Design</span>",
+      "css": ".ds-label { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #7A7569; line-height: 1; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Athletic Edit",
+    "overview": "London Carmichael's portfolio operates like a Nike campaign page, not a case study archive. The dominant visual instrument is maximum contrast — near-black against warm-white, with the Carmichael gold appearing only as the brand mark. Nothing decorates. Every element either holds the work or steps away from it.\n\nBarlow Condensed at extreme weights and sizes carries the visual energy. Inter stays functional, measured, and quiet. The gap between those two registers — commanding display type against plainspoken body copy — is the typographic personality of the system. Big type shouts. Chrome steps back. Work speaks.\n\nThe system explicitly rejects Swiss/International Style grid rationality, the over-templated agency case-study format, and the generic creative-portfolio white-card-hover-overlay cliché. It chases instead the effortless authority of a Nike campaign drop: purposeful negative space, a single dominant mark, and work that does not need explanation.",
+    "keyCharacteristics": [
+      "Near-black / warm-white contrast as the primary design instrument",
+      "Carmichael gold appearing only at the brand mark — never as UI chrome",
+      "Barlow Condensed at 700–900 weight for all display and headline moments",
+      "Flat surfaces throughout; depth through contrast, not shadow",
+      "Generous, asymmetric spacing that creates rhythm, not comfort",
+      "Dark and light modes both viable — maximum contrast in either"
+    ],
+    "rules": [
+      { "name": "The Gold Mark Rule", "body": "Carmichael Gold is the brand mark. It appears on the wordmark and may accent one typographic detail per screen. Using it as a button background, text color, underline, border fill, or hover state is prohibited. Its scarcity is the identity.", "section": "colors" },
+      { "name": "The No-Pure Neutrals Rule", "body": "No #000000 or #ffffff. Every neutral carries a warm tint (hue 85°, chroma 0.005–0.01). If a neutral feels cool or generic, add warmth.", "section": "colors" },
+      { "name": "The Maximum Contrast Rule", "body": "Minimum WCAG AA (4.5:1). Target WCAG AAA on primary text pairs. The system is built for high contrast — meeting the minimum is underperforming.", "section": "colors" },
+      { "name": "The Scale Rule", "body": "There must be at least a 2× size gap between Display and Title. If Display renders at 72px, Title is 36px at most. A flat type scale is a flat page.", "section": "typography" },
+      { "name": "The Caps Rule", "body": "Barlow Condensed in Display and Headline roles is always uppercase. Inter is never forced uppercase except in Label. Mixed case in Barlow Condensed reads weak — commit to the full-caps authority or don't use the weight.", "section": "typography" },
+      { "name": "The Weight Rule", "body": "Body and Title use only Inter 400 and 500. Do not use Inter 700+ — that weight slot belongs to Barlow Condensed.", "section": "typography" },
+      { "name": "The Flat Frame Rule", "body": "Surfaces do not cast shadows at rest. Before adding a shadow, ask whether contrast alone can separate the surface. It always can in this system.", "section": "elevation" },
+      { "name": "The Focus Ring Exception", "body": "Focus rings may use the gold glow value (0 0 0 3px oklch(70% 0.12 85 / 0.25)). This is the one permitted use of gold outside the brand mark, and it applies only to :focus-visible, never to :hover.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do use Barlow Condensed at 700–900 weight for all display moments — the larger the better. If it doesn't feel too big, go bigger.",
+      "Do let work breathe. Generous, asymmetric spacing makes the portfolio feel confident; tight spacing makes it feel anxious.",
+      "Do maintain near-black/warm-white contrast as the primary visual tool — it should feel like a Nike campaign at a glance.",
+      "Do keep Carmichael Gold as the brand mark only. One appearance on the wordmark, optionally one small typographic detail. Never UI chrome.",
+      "Do use sharp-cornered (0px radius) buttons if CTAs are added — sporty, not soft.",
+      "Do load Barlow Condensed from Google Fonts alongside Inter before implementing display type.",
+      "Do test at full-bleed widths on a large monitor — the portfolio should feel like a billboard, not a brochure."
+    ],
+    "donts": [
+      "Don't use Swiss/International Style grid rationality — neutral columns and rational grids are too impersonal for this portfolio.",
+      "Don't use the Carmichael Gold as a UI color for buttons, borders, backgrounds, text, or hover states. The mark's power comes from its singularity.",
+      "Don't use identical white-card grids with hover-overlay reveals — the generic creative-portfolio template this system explicitly rejects.",
+      "Don't use gradient text (background-clip: text + gradient) — prohibited.",
+      "Don't use glassmorphism — prohibited.",
+      "Don't use border-left or border-right greater than 1px as a colored accent stripe — prohibited.",
+      "Don't add shadows to resting card surfaces. The Flat Frame Rule applies.",
+      "Don't use over-minimal layouts that read as timid or academic — athletic minimalism has energy. If it feels empty rather than purposeful, add scale, not decoration.",
+      "Don't use Inter at 700+ weight. That weight slot belongs to Barlow Condensed.",
+      "Don't write long case study descriptions. Two sentences is a ceiling, not a floor.",
+      "Don't add decorative elements outside the work itself: no background textures, no ornamental rules, no dividers, no pattern fills."
+    ]
+  }
+}
